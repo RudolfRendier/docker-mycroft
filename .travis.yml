@@ -7,17 +7,12 @@ services:
 
 jobs:
   include:
-    - stage: build docker image
+    - stage: build, test and push docker image
       script:
-      - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
       - docker build -t docker-mycroft .
       - docker images
       - docker tag docker-mycroft $DOCKER_USERNAME/docker-mycroft
-    - stage: test
-      script:
       - docker run -d -p 127.0.0.1:8181:8181 --name mycroft-docker $DOCKER_USERNAME/docker-mycroft
       - docker ps | grep -q "mycroft-docker"
-    - stage: push
-      script:
       - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
       - docker push $DOCKER_USERNAME/docker-mycroft
