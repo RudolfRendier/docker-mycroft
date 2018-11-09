@@ -10,6 +10,7 @@ services:
   - docker  
   
 before_install:
+  - sudo apt-get update
   - chmod u+x host_setup.sh && sudo ./host_setup.sh
 
 jobs:
