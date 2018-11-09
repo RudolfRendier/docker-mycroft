@@ -1,11 +1,16 @@
 sudo: required
 
+dist: xenial
+
 language: python
 python:
   - "3.6"
 
 services:
-  - docker
+  - docker  
+  
+before_install:
+  - ./host_setup.sh
 
 jobs:
   include:
