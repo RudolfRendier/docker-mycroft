@@ -10,7 +10,7 @@ services:
   - docker  
   
 before_install:
-  - ./host_setup.sh
+  - chmod u+x host_setup.sh && ./host_setup.sh
 
 jobs:
   include:
