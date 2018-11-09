@@ -12,6 +12,10 @@ services:
 before_install:
   - sudo apt-get update
   - chmod u+x host_setup.sh && sudo ./host_setup.sh
+  
+env:
+  global:
+    - MAKEFLAGS="-j 4"
 
 jobs:
   include:
