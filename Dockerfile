@@ -8,7 +8,7 @@ RUN set -x \
 	&& sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list \
 	&& apt-get update \
 	&& apt-get -y install git python3 python3-pip locales sudo \
-	&& pip install --upgrade setuptools
+	&& pip3 install --upgrade setuptools \
 	&& pip3 install future msm \
 	# Checkout Mycroft
 	&& git clone https://github.com/MycroftAI/mycroft-core.git /opt/mycroft \
