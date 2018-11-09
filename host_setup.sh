@@ -3,11 +3,11 @@
 
 apt-get install -y \
     git \
-    python \
-    python-dev \
-    python-setuptools \
-    python-virtualenv \
-    python-gobject-dev \
+    python3 \
+    python3-dev \
+    python3-setuptools \
+    python3-virtualenv \
+    python3-gobject-dev \
     virtualenvwrapper \
     libtool \
     libffi-dev \
