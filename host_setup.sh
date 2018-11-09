@@ -7,7 +7,7 @@ apt-get install -y \
     python3-dev \
     python3-setuptools \
     python3-virtualenv \
-    python3-gobject-dev \
+    python-gobject-dev \
     virtualenvwrapper \
     libtool \
     libffi-dev \
