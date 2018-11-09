@@ -1,4 +1,4 @@
-FROM ubuntu:17.10
+FROM resin/armv7hf-debian:stretch
 
 ENV TERM linux
 ENV DEBIAN_FRONTEND noninteractive
